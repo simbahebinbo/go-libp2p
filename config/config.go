@@ -172,9 +172,8 @@ func (cfg *Config) makeSwarm(eventBus event.Bus, enableMetrics bool) (*swarm.Swa
 	if enableMetrics {
 		opts = append(opts, swarm.WithMetricsTracer(swarm.NewMetricsTracer()))
 	}
-	opts = append(opts, swarm.WithEventBus(eventBus))
 	// TODO: Make the swarm implementation configurable.
-	return swarm.NewSwarm(pid, cfg.Peerstore, opts...)
+	return swarm.NewSwarm(pid, cfg.Peerstore, eventBus, opts...)
 }
 
 func (cfg *Config) addTransports(h host.Host) error {
