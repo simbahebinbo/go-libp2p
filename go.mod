@@ -48,7 +48,6 @@ require (
 	github.com/prometheus/client_golang v1.14.0
 	github.com/raulk/go-watchdog v1.3.0
 	github.com/stretchr/testify v1.8.1
-	go.opencensus.io v0.24.0
 	go.uber.org/fx v1.18.2
 	go.uber.org/goleak v1.1.12
 	golang.org/x/crypto v0.3.0
